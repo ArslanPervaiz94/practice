@@ -12,10 +12,10 @@
 #display_value {
   width: 90%;
   margin: 8px;
-  height: 40px;
+  height: 50px;
   border-radius: 5px;
   border: 1px solid gray;
-  font-size: 20px;
+  font-size: 30px;
   padding: 0 5px;
 }
 .btn_container {
@@ -27,7 +27,8 @@
   height: 50px;
   width: 50px;
   margin: 5px;
-  background-color: beige;
+  background-color: rgb(198, 252, 222);
   border: 1px solid;
   border-radius: 8%;
+  font-size: 20px;
 }

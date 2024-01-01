@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simple Game</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+    <button
+      onclick="
+      // console.log ('You Chose Bat');
+    let randomNum = Math.random() * 3;
+    let compChoice;
+    if (
+      randomNum > 0 && randomNum <= 1
+    )
+    { compChoice = 'Bat';
+  // console.log (`Computer Chose ${compChoice}`);
+}
+    else if (randomNum > 1 && randomNum <= 2)
+    {
+      compChoice = 'Ball';
+      // console.log (`Computer Chose ${compChoice}`);
+    } else {compChoice = 'Stump'; 
+    // console.log (`Computer Chose ${compChoice}`);
+    }
+     let resultMsg;
+     if (compChoice === 'Bat') {
+     resultMsg = `It's a Tie`;
+     } else if (compChoice ==='Ball') {
+      resultMsg = `User Won`;
+     } else if (compChoice === 'Stump') {
+      resultMsg= `Computer Won`;
+     }
+alert (`You Chose Bat. Computer Chose ${compChoice}.  ${resultMsg}`)
+    
+    "
+    >
+      Bat
+    </button>
+    <button
+      onclick="
+      // console.log ('You Chose Ball');
+    randomNum = Math.random() * 3;
+    // compChoice;
+    if (
+      randomNum > 0 && randomNum <= 1
+    )
+    { compChoice = 'Bat';
+  // console.log (`Computer Chose ${compChoice}`);
+}
+    else if (randomNum > 1 && randomNum <= 2)
+    {
+      compChoice = 'Ball';
+      // console.log (`Computer Chose ${compChoice}`);
+    } else {compChoice = 'Stump'; 
+    // console.log (`Computer Chose ${compChoice}`);
+    }
+    //  resultMsg;
+     if (compChoice === 'Bat') {
+     resultMsg = `Computer Won`;
+     } else if (compChoice ==='Ball') {
+      resultMsg = `It's a Tie`;
+     } else if (compChoice === 'Stump') {
+      resultMsg= `User Won` ;
+     }
+alert (`You Chose Ball. Computer Chose ${compChoice}.  ${resultMsg}`)
+    
+    "
+    >
+      Ball
+    </button>
+    <button
+      onclick="
+      // console.log ('You Chose Ball');
+    randomNum = Math.random() * 3;
+    // compChoice;
+    if (
+      randomNum > 0 && randomNum <= 1
+    )
+    { compChoice = 'Bat';
+  // console.log (`Computer Chose ${compChoice}`);
+}
+    else if (randomNum > 1 && randomNum <= 2)
+    {
+      compChoice = 'Ball';
+      // console.log (`Computer Chose ${compChoice}`);
+    } else {compChoice = 'Stump'; 
+    // console.log (`Computer Chose ${compChoice}`);
+    }
+    //  resultMsg;
+     if (compChoice === 'Bat') {
+     resultMsg = `User Won`;
+     } else if (compChoice ==='Ball') {
+      resultMsg = `Computer Won`;
+     } else if (compChoice === 'Stump') {
+      resultMsg= `It's a Tie` ;
+     }
+alert (`You Chose Stump. Computer Chose ${compChoice}.  ${resultMsg}`)
+    
+    "
+    >
+      Stump
+    </button>
+  </body>
+</html>

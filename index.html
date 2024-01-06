@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Practice JS</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
   <body>
-    <button
-      class="add_btn"
-      onclick="cart_quantity += 1;document.querySelector(
-        '#cart_sum'
-      ).innerText = `Your Bag has ${cart_quantity} Items`; "
-    >
-      Add to Bag
-    </button>
-    <button
-      class="wish_btn"
-      onclick=" cart_quantity -= 1; document.querySelector(
-      '#cart_sum'
-    ).innerText = `Your Bag has ${cart_quantity} Items`; "
-    >
-      Move to Wishlist
-    </button>
-    <button
-      class="add_btn"
-      onclick="cart_quantity = cart_quantity+2; document.querySelector(
-      '#cart_sum'
-    ).innerText = `Your Bag has ${cart_quantity} Items`; "
-    >
-      Add 1+1 Sale
-    </button>
-    <h1 id="cart_sum"></h1>
+    <!-- practice exercise of if else boolean from notes -->
     <script>
-      let cart_quantity = 0;
-      document.querySelector(
-        "#cart_sum"
-      ).innerText = `Your Bag has ${cart_quantity} Items`;
+      let age = 3;
+      let gen = "male";
+      let fp;
+      if (age <= 5) {
+        fp = 100;
+      } else if (gen === "female") {
+        fp = 50;
+      } else if (age < 8) {
+        fp = 40;
+      } else if (age >= 65) {
+        fp = 45;
+      } else {
+        fp = 0;
+      }
+      console.log(` Your Final Price ticket is ${fp}`);
     </script>
   </body>
 </html>

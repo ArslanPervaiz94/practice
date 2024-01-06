@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="add_btn"
+      onclick="cart_quantity += 1;document.querySelector(
+        '#cart_sum'
+      ).innerText = `Your Bag has ${cart_quantity} Items`; "
+    >
+      Add to Bag
+    </button>
+    <button
+      class="wish_btn"
+      onclick=" cart_quantity -= 1; document.querySelector(
+      '#cart_sum'
+    ).innerText = `Your Bag has ${cart_quantity} Items`; "
+    >
+      Move to Wishlist
+    </button>
+    <button
+      class="add_btn"
+      onclick="cart_quantity = cart_quantity+2; document.querySelector(
+      '#cart_sum'
+    ).innerText = `Your Bag has ${cart_quantity} Items`; "
+    >
+      Add 1+1 Sale
+    </button>
+    <h1 id="cart_sum"></h1>
+    <script>
+      let cart_quantity = 0;
+      document.querySelector(
+        "#cart_sum"
+      ).innerText = `Your Bag has ${cart_quantity} Items`;
+    </script>
+  </body>
+</html>

@@ -12,17 +12,17 @@
     <h1>Bat Ball Stump Game</h1>
     <button
       onclick="
-      // funtion call that is created in external file
-       rendomNoGen();
+      // use return instead of define a global variable in func.js file thats y this method is used to call a func here and assign to a variable
+      let computerChoice = rendomNoGen();
      let resultMsg;
-     if (compChoice === 'Bat') {
+     if (computerChoice === 'Bat') {
      resultMsg = `It's a Tie`;
-     } else if (compChoice ==='Ball') {
+     } else if (computerChoice ==='Ball') {
       resultMsg = `User Won`;
-     } else if (compChoice === 'Stump') {
+     } else if (computerChoice === 'Stump') {
       resultMsg= `Computer Won`;
      }
-     alert (`You Chose Bat. Computer Chose ${compChoice}.  ${resultMsg}`)
+     alert (`You Chose Bat. Computer Chose ${computerChoice}.  ${resultMsg}`)
     
      "
     >
@@ -30,15 +30,15 @@
     </button>
     <button
       onclick="
-      rendomNoGen();
-     if (compChoice === 'Bat') {
+      computerChoice = rendomNoGen();
+     if (computerChoice === 'Bat') {
      resultMsg = `Computer Won`;
-     } else if (compChoice ==='Ball') {
+     } else if (computerChoice ==='Ball') {
       resultMsg = `It's a Tie`;
-     } else if (compChoice === 'Stump') {
+     } else if (computerChoice === 'Stump') {
       resultMsg= `User Won` ;
      }
-      alert (`You Chose Ball. Computer Chose ${compChoice}.  ${resultMsg}`)
+      alert (`You Chose Ball. Computer Chose ${computerChoice}.  ${resultMsg}`)
     
      "
     >
@@ -46,15 +46,15 @@
     </button>
     <button
       onclick="
-      rendomNoGen();
-     if (compChoice === 'Bat') {
+     computerChoice = rendomNoGen();
+     if (computerChoice === 'Bat') {
      resultMsg = `User Won`;
-     } else if (compChoice ==='Ball') {
+     } else if (computerChoice ==='Ball') {
       resultMsg = `Computer Won`;
-     } else if (compChoice === 'Stump') {
+     } else if (computerChoice === 'Stump') {
       resultMsg= `It's a Tie` ;
      }
-     alert (`You Chose Stump. Computer Chose ${compChoice}.  ${resultMsg}`)
+     alert (`You Chose Stump. Computer Chose ${computerChoice}.  ${resultMsg}`)
     
      "
     >

@@ -12,12 +12,12 @@
     <h1>Bat Ball Stump Game</h1>
     <button
       onclick="
-      // use return instead of define a global variable in func.js file thats y this method is used to call a func here and assign to a variable
+      //  Random no gen function call from func.js file
       let computerChoice = rendomNoGen();
+      // comparison b/w comp and user function call from func.js
      let resultMsg = finalResult ('Bat' , computerChoice)
-     
-     alert (`You Chose Bat. Computer Chose ${computerChoice}.  ${resultMsg}`)
-    
+     // result show function call from func.js 
+     result ('Bat' , computerChoice , resultMsg);
      "
     >
       Bat
@@ -26,8 +26,7 @@
       onclick="
       computerChoice = rendomNoGen();
       resultMsg = finalResult ('Ball' , computerChoice)
-      alert (`You Chose Ball. Computer Chose ${computerChoice}.  ${resultMsg}`)
-    
+      result ('Ball' , computerChoice , resultMsg);
      "
     >
       Ball
@@ -36,8 +35,7 @@
       onclick="
      computerChoice = rendomNoGen();
      resultMsg = finalResult ('Stump' , computerChoice)
-     alert (`You Chose Stump. Computer Chose ${computerChoice}.  ${resultMsg}`)
-    
+     result ('Stump' , computerChoice , resultMsg);
      "
     >
       Stump

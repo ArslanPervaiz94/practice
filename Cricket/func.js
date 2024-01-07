@@ -1,5 +1,6 @@
 // this is global variable comchoice
 // let compChoice;
+// use for random no generation
 function rendomNoGen() {
   let randomNum = Math.random() * 3;
 
@@ -11,7 +12,7 @@ function rendomNoGen() {
     return "Stump";
   }
 }
-
+// use for comparison b/w user and computer
 function finalResult(userChoice, compChoice) {
   if (userChoice === "Bat") {
     if (compChoice === "Bat") {
@@ -38,4 +39,10 @@ function finalResult(userChoice, compChoice) {
       return "Its a Tie";
     }
   }
+}
+
+// use to show final result
+
+function result(userChoice, compChoice, fResult) {
+  alert(`You Chose ${userChoice}. Computer Chose ${compChoice}.  ${fResult}`);
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>function</title>
+  </head>
+  <body>
+    <script>
+      // checking even or odd using
+      console.log("Even or Odd Number");
+      function isEven(num) {
+        let result = num % 2;
+        let isEven = result == 0;
+        return isEven;
+      }
+      console.log(isEven(25));
+      console.log(isEven(2501));
+      console.log(isEven(325));
+      console.log(isEven(32));
+      console.log(isEven(990));
+
+      // checking greater or lesser no using function
+      console.log("Smaller or Greater Number");
+      function smaller(num1, num2) {
+        // using turnory operator
+        return num1 < num2 ? num1 : num2;
+        // using if else statement
+        // if (num1 < num2) {
+        //   return num1;
+        // } else {
+        //   return num2;
+        // }
+      }
+
+      console.log(smaller(15, 25));
+      console.log(smaller(315, 252));
+      console.log(smaller(153, 125));
+      console.log(smaller(615, 253));
+      console.log(smaller(15, 5));
+
+      // converting celcius to farenhiet
+      console.log("Celcius to Farenhiet Temp Convert");
+      function isFar(cel) {
+        return (9 / 5) * cel + 32;
+      }
+      console.log(isFar(10));
+      console.log(isFar(25));
+      console.log(isFar(100));
+      console.log(isFar(1));
+      console.log(isFar(50));
+    </script>
+  </body>
+</html>

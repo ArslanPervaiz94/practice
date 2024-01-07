@@ -14,14 +14,8 @@
       onclick="
       // use return instead of define a global variable in func.js file thats y this method is used to call a func here and assign to a variable
       let computerChoice = rendomNoGen();
-     let resultMsg;
-     if (computerChoice === 'Bat') {
-     resultMsg = `It's a Tie`;
-     } else if (computerChoice ==='Ball') {
-      resultMsg = `User Won`;
-     } else if (computerChoice === 'Stump') {
-      resultMsg= `Computer Won`;
-     }
+     let resultMsg = finalResult ('Bat' , computerChoice)
+     
      alert (`You Chose Bat. Computer Chose ${computerChoice}.  ${resultMsg}`)
     
      "
@@ -31,13 +25,7 @@
     <button
       onclick="
       computerChoice = rendomNoGen();
-     if (computerChoice === 'Bat') {
-     resultMsg = `Computer Won`;
-     } else if (computerChoice ==='Ball') {
-      resultMsg = `It's a Tie`;
-     } else if (computerChoice === 'Stump') {
-      resultMsg= `User Won` ;
-     }
+      resultMsg = finalResult ('Ball' , computerChoice)
       alert (`You Chose Ball. Computer Chose ${computerChoice}.  ${resultMsg}`)
     
      "
@@ -47,13 +35,7 @@
     <button
       onclick="
      computerChoice = rendomNoGen();
-     if (computerChoice === 'Bat') {
-     resultMsg = `User Won`;
-     } else if (computerChoice ==='Ball') {
-      resultMsg = `Computer Won`;
-     } else if (computerChoice === 'Stump') {
-      resultMsg= `It's a Tie` ;
-     }
+     resultMsg = finalResult ('Stump' , computerChoice)
      alert (`You Chose Stump. Computer Chose ${computerChoice}.  ${resultMsg}`)
     
      "

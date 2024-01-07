@@ -1,3 +1,4 @@
+// this is global variable comchoice
 let compChoice;
 function rendomNoGen() {
   let randomNum = Math.random() * 3;

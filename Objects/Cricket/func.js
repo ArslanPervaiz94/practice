@@ -54,10 +54,7 @@ function finalResult(userChoice, compChoice) {
 
 function result(userChoice, compChoice, fResult) {
   alert(`You Chose ${userChoice}. Computer Chose ${compChoice}. ${fResult}. 
-
-      Won: ${score.Won}.
-      Lost: ${score.Lost}.
-      Tie: ${score.Tie}`);
+      ${score.showScore()}`);
 }
 
 // Score Maintaining using Objects
@@ -66,4 +63,10 @@ let score = {
   Won: 0,
   Lost: 0,
   Tie: 0,
+  //func creation
+  showScore: function () {
+    return `Won: ${score.Won}.
+      Lost: ${score.Lost}.
+      Tie: ${score.Tie}`;
+  },
 };

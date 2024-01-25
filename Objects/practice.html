@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Object Practice Exercise</title>
+  </head>
+  <body>
+    <script>
+      //Prob 1 Create object to represent a product from Myntra
+      //solution
+
+      let product1 = {
+        name: "T-Shirt",
+        price: 1000,
+        size: "medium",
+      };
+      console.log(product1);
+
+      //Prob 2 Create an Object with two references and log changes to one object by changing the other one.
+      let product2 = {
+        name: "T-Shirt",
+        price: 1000,
+        size: "medium",
+      };
+      let updateProduct = product2;
+      console.log(product2);
+      product2.price = 2000;
+      console.log(product2);
+      product2.size = "large";
+      console.log(product2);
+
+      //Prob 3 Use bracket notation to display delivery-time.
+      let product3 = {
+        name: "T-Shirt",
+        price: 1000,
+        size: "medium",
+        "delivery-time": "Same Day",
+      };
+      console.log(product3);
+      console.log(product3["delivery-time"]);
+
+      // Prob 3 Given an object {message: 'good job', status: 'complete'}, use de-structuring to create two variables message and status.
+
+      let task = {
+        message: "Good Job",
+        status: "Compeleted",
+      };
+      console.log(task);
+      let { message, status } = task;
+      console.log(message);
+      console.log(status);
+
+      // prob 4 Add function isIdenticalProduct to compare two product objects.
+      // hum is main pro1 pro2 pro3 ki values ko change kr k is ko compare kr sakty hain neachy last main jo comparison ho raha hay
+
+      let pro1 = {
+        name: "T-Shirt",
+        price: 1000,
+        size: "medium",
+        "delivery-time": "Same Day",
+      };
+
+      let pro2 = {
+        name: "T-Shirt",
+        price: 1000,
+        size: "small",
+        "delivery-time": "Same Day",
+      };
+      let pro3 = {
+        name: "T-Shirt",
+        price: 1000,
+        size: "small",
+        "delivery-time": "Same Day",
+      };
+
+      function isIdProd(pro1, pro2) {
+        if (typeof pro1 !== "object" || typeof pro2 !== "object") {
+          console.warn("Parameters are not object type");
+          return false;
+        }
+        if (pro1 == pro2) {
+          return true;
+        }
+        if (
+          pro1.name === pro2.name &&
+          pro1.size === pro2.size &&
+          pro1.price === pro2.price
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(isIdProd(pro1, pro2));
+      console.log(isIdProd("", pro2));
+      console.log(isIdProd(pro1, pro3));
+      console.log(isIdProd(pro2, pro2));
+      console.log(isIdProd(pro2, pro3));
+    </script>
+  </body>
+</html>

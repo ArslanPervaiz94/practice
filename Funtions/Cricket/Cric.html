@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simple Game</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+    <button
+      onclick="
+      //  Random no gen function call from func.js file
+      let computerChoice = rendomNoGen();
+      // comparison b/w comp and user function call from func.js
+     let resultMsg = finalResult ('Bat' , computerChoice)
+     // result show function call from func.js 
+     result ('Bat' , computerChoice , resultMsg);
+     "
+    >
+      Bat
+    </button>
+    <button
+      onclick="
+      computerChoice = rendomNoGen();
+      resultMsg = finalResult ('Ball' , computerChoice)
+      result ('Ball' , computerChoice , resultMsg);
+     "
+    >
+      Ball
+    </button>
+    <button
+      onclick="
+     computerChoice = rendomNoGen();
+     resultMsg = finalResult ('Stump' , computerChoice)
+     result ('Stump' , computerChoice , resultMsg);
+     "
+    >
+      Stump
+    </button>
+
+    <script src="func.js"></script>
+  </body>
+</html>

@@ -61,28 +61,22 @@ function result(userChoice, compChoice, fResult) {
 // Score Maintaining using Objects
 
 let scoreStr = localStorage.getItem("Score");
-// can be used this short hand or
-let score = JSON.parse(scoreStr) || {
-  Won: 0,
-  Lost: 0,
-  Tie: 0,
-};
-// can be used this big code instead of above short hand
-// let score;
-// if (scoreStr !== undefined) {
-//   score = JSON.parse(scoreStr);
-// } else {
-//   score = {
-//     Won: 0,
-//     Lost: 0,
-//     Tie: 0,
-//   };
-// }
-//func creation
-score.showScore = function () {
-  return `
-   Your Score is: 
-    Won: ${score.Won}.
-    Lost: ${score.Lost}.
-    Tie: ${score.Tie}`;
-};
+let score;
+resetScore(scoreStr);
+
+function resetScore(scoreStr) {
+  score = scoreStr
+    ? JSON.parse(scoreStr)
+    : {
+        Won: 0,
+        Lost: 0,
+        Tie: 0,
+      };
+
+  //func creation
+  score.showScore = function () {
+    return `Won: ${score.Won}.
+        Lost: ${score.Lost}.
+        Tie: ${score.Tie}`;
+  };
+}

@@ -54,8 +54,14 @@ function finalResult(userChoice, compChoice) {
 
 function result(userChoice, compChoice, fResult) {
   localStorage.setItem("Score", JSON.stringify(score));
-  alert(`You Chose ${userChoice}. Computer Chose ${compChoice}. ${fResult}. 
-      ${score.showScore()}`);
+  document.querySelector("#userMove").innerText = `You Chose ${userChoice}`;
+  document.querySelector(
+    "#systemMove"
+  ).innerText = `Computer Chose ${compChoice}`;
+  document.querySelector("#result").innerText = fResult;
+  document.querySelector("#score").innerText = score.showScore();
+  // alert(`You Chose ${userChoice}. Computer Chose ${compChoice}. ${fResult}.
+  //     ${score.showScore()}`);
 }
 
 // Score Maintaining using Objects
@@ -75,8 +81,6 @@ function resetScore(scoreStr) {
 
   //func creation
   score.showScore = function () {
-    return `Won: ${score.Won}.
-        Lost: ${score.Lost}.
-        Tie: ${score.Tie}`;
+    return `Your Score is : Won: ${score.Won}. Lost: ${score.Lost}. Tie: ${score.Tie}`;
   };
 }

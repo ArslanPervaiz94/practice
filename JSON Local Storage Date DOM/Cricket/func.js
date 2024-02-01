@@ -54,14 +54,14 @@ function finalResult(userChoice, compChoice) {
 
 function result(userChoice, compChoice, fResult) {
   localStorage.setItem("Score", JSON.stringify(score));
-  document.querySelector("#userMove").innerText =
-    userChoice !== undefined ? `You Chose ${userChoice}` : "";
-  document.querySelector("#systemMove").innerText =
-    compChoice !== undefined ? `Computer Chose ${compChoice}` : "";
-  document.querySelector("#result").innerText =
-    fResult !== undefined ? fResult : "";
-  document.querySelector("#score").innerText =
-    score !== undefined ? score.showScore() : "";
+  document.querySelector("#userMove").innerText = userChoice
+    ? `You Chose ${userChoice}`
+    : "";
+  document.querySelector("#systemMove").innerText = compChoice
+    ? `Computer Chose ${compChoice}`
+    : "";
+  document.querySelector("#result").innerText = fResult || "";
+  document.querySelector("#score").innerText = score.showScore();
 
   // this comment section is used to show the result in alert popup
   // alert(`You Chose ${userChoice}. Computer Chose ${compChoice}. ${fResult}.

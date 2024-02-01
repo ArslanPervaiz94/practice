@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice Exercise</title>
+    <style>
+      #btn {
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px dotted black;
+      }
+      .odd {
+        background-color: rgb(238, 96, 96);
+      }
+      .even {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="greet"></h2>
+
+    <button id="btn" onclick=" btnpressed();"></button>
+    <script>
+      // Prob 1. Display good morning, afternoon and night based on current hour.
+
+      // let date = new Date();
+      // let hours = date.getHours();
+
+      // let heading = document.querySelector("#greet");
+      // console.log(hours);
+      // if (hours > 5 && hours < 12) {
+      //   heading.innerText = " Good Morning ";
+      // } else if (hours > 12 && hours < 18) {
+      //   heading.innerText = " Good After Noon ";
+      // } else {
+      //   heading.innerText = " Good Night ";
+      // }
+
+      // Prob 2. Add the name to the output too.
+
+      function sayGreet(name = "Dear") {
+        let date = new Date();
+        let hours = date.getHours();
+
+        let heading = document.querySelector("#greet");
+        console.log(hours);
+        if (hours > 5 && hours < 12) {
+          heading.innerText = ` Good Morning ${name}`;
+        } else if (hours > 12 && hours < 18) {
+          heading.innerText = ` Good After Noon ${name}`;
+        } else {
+          heading.innerText = ` Good Night ${name} `;
+        }
+      }
+      //pass the argument to chk the name of the person otherwise default value is Dear
+      sayGreet();
+
+      // Prob 3 Create a Button which shows the number how many times it has been pressed.
+      //  • Also, it has different colors for when it has been pressed odd or even times.
+      //  • The click count should also survive browser refresh.
+
+      let timesClicked = localStorage.getItem("Clicked") || 0;
+      function btnpressed() {
+        timesClicked++;
+        localStorage.setItem("Clicked", timesClicked);
+        myBtn();
+      }
+
+      function myBtn() {
+        let btn = document.querySelector("#btn");
+
+        if (timesClicked % 2 === 0) {
+          btn.classList.remove("odd");
+          btn.classList.add("even");
+        } else {
+          btn.classList.remove("even");
+          btn.classList.add("odd");
+        }
+
+        btn.innerText = timesClicked;
+      }
+      myBtn();
+    </script>
+  </body>
+</html>

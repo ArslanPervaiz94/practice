@@ -2,15 +2,13 @@
 <html lang="en">
   <head>
     <title>Simple Game</title>
-    <style>
-      body {
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="cric.css" />
   </head>
   <body>
     <h1>Bat Ball Stump Game</h1>
+
     <button
+      class="choice-btn"
       onclick="
       //  Random no gen function call from func.js file
       let computerChoice = rendomNoGen();
@@ -20,37 +18,57 @@
      result ('Bat' , computerChoice , resultMsg);
      "
     >
-      Bat
+      <img
+        class="choice-img"
+        src="/JSON Local Storage Date DOM/images/bat.png"
+        alt="Bat-Image"
+      />
     </button>
     <button
+      class="choice-btn"
       onclick="
       computerChoice = rendomNoGen();
       resultMsg = finalResult ('Ball' , computerChoice)
       result ('Ball' , computerChoice , resultMsg);
      "
     >
-      Ball
+      <img
+        class="choice-img"
+        src="/JSON Local Storage Date DOM/images/ball.png"
+        alt="Ball-Image"
+      />
     </button>
     <button
+      class="choice-btn"
       onclick="
      computerChoice = rendomNoGen();
      resultMsg = finalResult ('Stump' , computerChoice)
      result ('Stump' , computerChoice , resultMsg);
      "
     >
-      Stump
-    </button>
-    <button
-      onclick="localStorage.clear() 
-      resetScore();"
-    >
-      Reset
+      <img
+        class="choice-img"
+        src="/JSON Local Storage Date DOM/images/stump.png"
+        alt="Stump-Image"
+      />
     </button>
 
     <h4 id="userMove"></h4>
     <h4 id="systemMove"></h4>
     <h4 id="result"></h4>
     <h4 id="score"></h4>
+
+    <button
+      class="choice-btn"
+      onclick="localStorage.clear() 
+      resetScore();"
+    >
+      <img
+        class="choice-img"
+        src="/JSON Local Storage Date DOM/images/reset.png"
+        alt="Reset-Image"
+      />
+    </button>
 
     <script src="func.js"></script>
   </body>

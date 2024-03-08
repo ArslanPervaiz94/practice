@@ -1,5 +1,4 @@
-// yeh hum ny html sy class ko access kia hay
-let itemsContainerElement = document.querySelector(".items-container");
+
 // yeh obj banaya hay products ko generic/add krnay k liay
 // let item = {
 //   item_image: "images/1.jpg",
@@ -18,6 +17,11 @@ let itemsContainerElement = document.querySelector(".items-container");
 // front page pr show ho raha hay
 
 function displayItems() {
+  // yeh hum ny html sy class ko access kia hay
+let itemsContainerElement = document.querySelector(".items-container");
+  if (!itemsContainerElement) {
+    return;
+  }
   let innerHTML = "";
   items.forEach((item) => {
     innerHTML += `<div class="item-container">
@@ -37,11 +41,13 @@ function displayItems() {
 }
 
 //array for bag items
-let bagItems = [];
+let bagItems;
 onLoad();
 
 // all func are called here
 function onLoad() {
+  let bagItemsStr = localStorage.getItem("bagItems");
+  bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
   displayItems();
   displayBagCount();
 }
@@ -49,6 +55,7 @@ function onLoad() {
 
 function addToBag(itemid) {
   bagItems.push(itemid);
+  localStorage.setItem("bagItems", JSON.stringify(bagItems));
   displayBagCount();
 }
 function displayBagCount() {
